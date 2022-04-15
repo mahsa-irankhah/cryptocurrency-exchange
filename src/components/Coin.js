@@ -1,20 +1,25 @@
 import React from 'react';
+import "./Coin.css";
 
 const Coin = ({name, symbol, image, price, marketcap, priceChange}) => {
     return (
-      <div>
-        <img src={image} />
+      <div className="coin-container">
+        
+        <img src={image} alt={name} />
 
-        <span>{name}</span>
-
+        <span className="name">{name}</span>
+        
         <span>{symbol.toUpperCase()}</span>
 
-        <span>{price.toLocaleString()}</span>
+        <span>${price.toLocaleString()}</span>
 
-        <span>{marketcap.toLocaleString()}</span>
+        <span
+          className={priceChange > 0 ? "positive-change" : "negative-change"}
+        >
+          {priceChange}%
+        </span>
 
-        <span>{priceChange}</span>
-        
+        <span>${marketcap.toLocaleString()}</span>
       </div>
     );
 };

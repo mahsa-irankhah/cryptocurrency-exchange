@@ -1,0 +1,44 @@
+.input {
+    margin: 50px;
+    padding: 15px;
+    border: gold solid 1px;
+    box-shadow: 5px 5px 5px goldenrod;
+    border-radius: 8px;
+    width: 35%;
+    font-size: 17px;
+}
+
+input:focus {
+    outline: none;
+    background-color: rgb(211, 186, 124);
+    transition: all 0.3s ease-in-out;
+}
+
+::placeholder {
+    color: maroon;
+    font-weight: bold;
+    opacity: 0.5;
+    width: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.loader {
+    margin-top: 50px;
+}
+
+.loader h1 {
+    color: goldenrod;
+    padding: 30px;
+}
+
+.loader img {
+    width: 80px;
+}
+
+@media (max-width: 480px) {
+    .input {
+        padding: 7px;
+        font-size: 10px;
+        margin: 30px;
+    }
+}
